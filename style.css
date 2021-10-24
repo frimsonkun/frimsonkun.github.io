@@ -222,15 +222,19 @@ body {
 @media (max-width: 630px) {
     .headerPart {
         display: block;
+        margin: auto;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
     }
     .myFace {
         height: 200px;
-        margin-left: 25%;
+        display: block;
+        margin: 0 auto;
     }
     .aboutMe {
         font-size: 15px;
         font-weight: 600;
-        padding-left: 30px;
         margin: -50px auto -30px auto;
     }
     .bigText {
@@ -246,12 +250,18 @@ body {
         font-size: 12px;
     }
     .skillLine {
-        width: 200px;
+        width: 100%;
     }
     .contacts {
         margin-bottom: -30px;
     }
     .contacts p {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 370px) {
+    body {
+        overflow: hidden;
     }
 }
