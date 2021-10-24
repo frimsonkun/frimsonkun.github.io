@@ -6,6 +6,10 @@
     color: black;
 }
 
+body {
+    background-color: rgba(228, 228, 228, 0.5);
+}
+
 .bgBlock {
     margin-top: 12vh;
     min-height: 30vh;
@@ -25,7 +29,6 @@
     display: flex;
     justify-content: space-evenly;
     padding-top: 40px;
-    height: 340px;
 }
 
 .myFace {
@@ -71,6 +74,10 @@
     color: darkorange;
 }
 
+.contacts p {
+    padding-bottom: 5px;
+}
+
 .about {
     padding-top: 40px;
 }
@@ -96,7 +103,7 @@
 .skillLine {
     position: relative;
     height: 3px;
-    width: 300px;
+    width: 400px;
     border-radius: 15px;
     background-color: rgba(192, 192, 192, 0.747);
 }
@@ -125,4 +132,126 @@
 .bigText span {
     font-size: 10px;
     color: grey;
+}
+
+.kursPhoto {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .myFace {
+        height: 200px;
+    }
+    .aboutMe p {
+        font-size: 25px;
+    }
+    .bigText {
+        font-size: 30px;
+    }
+    .smallText {
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    ul li {
+        font-size: 15px;
+    }
+    .skillLine {
+        width: 350px;
+    }
+}
+
+@media (max-width: 880px) {
+    .myFace {
+        height: 190px;
+        margin-left: 15px;
+    }
+    .aboutMe p {
+        font-size: 20px;
+    }
+    .bigText {
+        font-size: 25px;
+    }
+    .smallText {
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    ul li {
+        font-size: 15px;
+    }
+    .language p {
+        font-size: 15px;
+    }
+    .skillLine {
+        width: 300px;
+    }
+}
+
+@media (max-width: 740px) {
+    .myFace {
+        height: 190px;
+        margin-left: 15px;
+    }
+    .aboutMe p {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .bigText {
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    .smallText {
+        font-size: 12px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+    ul li {
+        font-size: 12px;
+    }
+    .language p {
+        font-size: 15px;
+    }
+    .skillLine {
+        width: 250px;
+    }
+}
+
+@media (max-width: 630px) {
+    .headerPart {
+        display: block;
+    }
+    .myFace {
+        height: 200px;
+        margin-left: 25%;
+    }
+    .aboutMe {
+        font-size: 15px;
+        font-weight: 600;
+        padding-left: 30px;
+        margin: -50px auto -30px auto;
+    }
+    .bigText {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .smallText {
+        font-size: 12px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+    .language p {
+        font-size: 12px;
+    }
+    .skillLine {
+        width: 200px;
+    }
+    .contacts {
+        margin-bottom: -30px;
+    }
+    .contacts p {
+        font-size: 12px;
+    }
 }
