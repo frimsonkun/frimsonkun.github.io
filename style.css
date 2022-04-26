@@ -1,273 +1,97 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@500;700&display=swap');
+body {
+    height: 100%;
+    padding: 1rem;
+    background-color: #ECECEB;
+    color: #2B2A28;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.block {
+    justify-content: center;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 3.5vmax;
+    text-align: center;
+    margin-bottom: .5rem;
+    color: #b66d38f8;
+}
+
+ul,
+ul li {
+    text-decoration: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-    color: black;
-}
-
-body {
-    background-color: rgba(228, 228, 228, 0.5);
-    overflow-x: hidden;
-}
-
-.bgBlock {
-    margin-top: 12vh;
-    min-height: 30vh;
-    min-width: 100vh;
-    background: linear-gradient(90deg, darkorange 0%, orange 100%);
-}
-
-.mainBlock {
-    width: 50%;
-    margin: -150px auto 30px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
-}
-
-.headerPart {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 40px;
-}
-
-.myFace {
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
-}
-
-.container {
-    margin: auto;
-    width: 80%;
-}
-
-.aboutMe {
-    padding-top: 10vh;
-    line-height: 1.5;
-}
-
-.aboutMe p {}
-
-.bigText {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: "Bebas Neue", cursive;
-}
-
-.smallText {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.webDev {
-    font-size: 25px;
-}
-
-.contacts {
-    padding: 40px 0 0 0;
-}
-
-.contacts p a {
-    color: darkorange;
-}
-
-.contacts p {
-    padding-bottom: 5px;
-}
-
-.about {
-    padding-top: 40px;
-}
-
-.orangeLine {
-    height: 5px;
-    background-color: orange;
-    width: 125%;
-    margin-left: -12.5%;
-    box-shadow: 0px 0px 45px 0px rgba(255, 153, 0, 0.4);
-}
-
-.language {
-    margin-top: 20px;
-}
-
-.language p {
-    padding-bottom: 10px;
-    font-size: 20px;
+    font-size: 1.1vmax;
+    letter-spacing: .5px;
+    line-height: 1.3;
     font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
-.skillLine {
-    position: relative;
-    height: 3px;
-    width: 400px;
-    border-radius: 15px;
-    background-color: rgba(192, 192, 192, 0.747);
+b {
+    font-weight: 700;
+    font-family: inherit;
+    color: #336B6F;
 }
 
-.progress {
-    border-radius: 15px;
-    position: absolute;
-    top: -1px;
-    height: 5px;
-    background-color: orange;
+b::after {
+    content: "";
+    height: 2px;
+    width: 1vw;
+    display: inline-block;
+    margin: .25em .7vw;
+    background-color: rgba(0, 0, 0, 0.671);
 }
 
-.last {
-    margin-bottom: 30px;
+.dashed {
+    border: 4px dashed #336B6F;
+    border-radius: 0 20px 20px 20px;
+    display: inline-block;
+    margin: 1rem;
 }
 
-.works img {
-    margin-bottom: 30px;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+.propertyes {
+    border-radius: 20px;
+    padding: 1rem 1.3rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.308);
+    box-shadow: -6px 0 14px -6px rgba(0, 0, 0, 0.5), 6px 0 14px -6px rgba(0, 0, 0, 0.5);
 }
 
-.works .smallText {
-    padding-bottom: 20px;
+.propertyes .small {
+    width: auto;
 }
 
-.bigText span {
-    font-size: 10px;
-    color: grey;
-}
-
-.kursPhoto {
+span.propertyes {
     display: block;
-    margin: auto;
-    max-width: 100%;
+    margin: 1rem 0;
 }
 
-.bold {
-    font-weight: 600;
-}
-
-@media (max-width: 1100px) {
-    .myFace {
-        height: 200px;
-    }
-    .aboutMe p {
-        font-size: 25px;
-    }
-    .bigText {
-        font-size: 30px;
-    }
-    .smallText {
-        font-size: 15px;
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
-    ul li {
-        font-size: 15px;
-    }
-    .skillLine {
-        width: 350px;
-    }
-}
-
-@media (max-width: 880px) {
-    .myFace {
-        height: 190px;
-        margin-left: 15px;
-    }
-    .aboutMe p {
-        font-size: 20px;
-    }
-    .bigText {
-        font-size: 25px;
-    }
-    .smallText {
-        font-size: 15px;
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
-    ul li {
-        font-size: 15px;
-    }
-    .language p {
-        font-size: 15px;
-    }
-    .skillLine {
-        width: 300px;
-    }
-}
-
-@media (max-width: 740px) {
-    .myFace {
-        height: 190px;
-        margin-left: 15px;
-    }
-    .aboutMe p {
-        font-size: 15px;
-        font-weight: 600;
-    }
-    .bigText {
-        padding-top: 10px;
-        font-size: 25px;
-    }
-    .smallText {
-        font-size: 12px;
-        padding-top: 15px;
-        padding-bottom: 5px;
-    }
-    ul li {
-        font-size: 12px;
-    }
-    .language p {
-        font-size: 15px;
-    }
-    .skillLine {
-        width: 250px;
-    }
-}
-
-@media (max-width: 630px) {
-    .headerPart {
-        display: block;
-        margin: auto;
-        width: 80%;
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
-    .myFace {
-        height: 200px;
-        display: block;
-        margin: 0 auto;
+    .block {
+        width: 80%;
     }
-    .aboutMe {
-        font-size: 15px;
-        font-weight: 600;
-        margin: -50px auto -30px auto;
+    .title {
+        font-size: 5vw;
     }
-    .bigText {
-        padding-top: 10px;
-        font-size: 20px;
+    .dashed {
+        width: auto;
     }
-    .smallText {
-        font-size: 12px;
-        padding-top: 15px;
-        padding-bottom: 5px;
+    .block {
+        width: fit-content;
     }
-    .language p {
-        font-size: 12px;
-    }
-    .skillLine {
-        width: 100%;
-    }
-    .contacts {
-        margin-bottom: -30px;
-    }
-    .contacts p {
-        font-size: 12px;
-    }
-    .bgBlock {
-        margin-top: 8vh;
-        min-height: 20vh;
-    }
-    .mainBlock {
-        margin: -100px auto 25px auto;
+    ul li {
+        font-size: 2.5vmax;
     }
 }

@@ -1,2 +1,2 @@
-# frimsonkun.github.io
-My resume in English
+# layoutVocabulary
+Словарь английских слов, необходимых для вёрстки 
