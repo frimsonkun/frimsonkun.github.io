@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../sass/main.css">
+	<title>Вітаємо з завершенням курсу!</title>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+<body class="js-container conf-container">
+
+	<header>
+		<div class="container">
+			 <a href="/user-authed/user-authed.html" class="logo-link"><img src="../images/logo.svg" class="logo-image" alt="ГромОсвіта. Цифрова освіта місцевих громад."></a>
+			 <nav>
+				  <ul class="menu">
+						<li><a href="/user-authed/account.html" class="hovered">Мої курси</a></li>
+						<li><a href="/user-authed/courses.html">Освітні матеріали</a></li>
+						<li><a href="/user-authed/about.html">Про проєкт</a></li>
+						<li><a href="/user-authed/links.html">Корисні джерела</a></li>
+				  </ul>
+			 </nav>
+			 <a href="/user-authed/account.html" class="enter"><img src="../images/person.svg" alt="Вхід в аккаунт"></a>
+		</div>
+  </header>
+
+  <main>
+	<section class="congrat-text">
+		<div class="container">
+			<h1>Вітаємо з Завершенням Курсу з Веб-розробки!</h1>
+			<p>Дорогий громадянин, <br>
+			Вітаємо вас із успішним завершенням курсу веб-розробки! Ви зробили вражаючий прогрес і освоїли важливі навички, які вас чекають у світі веб-технологій<br><br>
+			Ми пишаємося вашими досягненнями і віримо, що вони стануть основою для вашої успішної кар'єри в галузі веб-розробки.</p>
+		</div>
+	</section>
+	<section class="next-steps">
+		<div class="container">
+		 <h2>Що далі?</h2>
+		 <p>Тепер, коли ви маєте стійкі фундаментальні знання, настав час вдосконалити свої навички, працюючи над реальними проектами. Рекомендуємо приєднатися до спільноти розробників, брати участь у проектах та постійно вдосконалювати свої вміння.</p>
+		 <p>Бажаємо вам подальших успіхів у вашому професійному розвитку та радимо залишатися завжди орієнтованими на нові можливості та технологічні тенденції.</p>
+		<a href="/user-authed/user-authed.html" class="btn blue-btn" style="width: 50%; margin: 0 auto;">Повернутись на головну сторінку</a>
+		</div>
+	</section>
+	</main>
+	
+	<footer>
+		<p>&copy; <script>document.write(new Date().getFullYear());</script> ГромОсвіта. Усі права захищені.</p>
+		<p class="freepik">Изображение от upklyak на Freepik</p>
+  </footer>
+</body>
+<style>
+	@keyframes confetti-medium {
+	0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+	
+	100% { transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg); }
+ }
+ 
+ .conf-container {
+	top:0px;
+ }
+ 
+ .confetti-container {
+	perspective: 700px;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+ }
+ 
+ .confetti {
+	position: absolute;
+	top: -10px;
+	border-radius: 0%;
+ }
+ 
+ .confetti--animation-medium {
+	animation: confetti-medium 1.75s linear 1 forwards;
+ }
+</style>
+<script src="/script/confetti.js"></script>
+</html>

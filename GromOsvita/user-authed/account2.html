@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../sass/main.css">
+	<title>Аккаунт</title>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<div class="container">
+			 <a href="/user-authed/user-authed.html" class="logo-link"><img src="../images/logo.svg" class="logo-image" alt="ГромОсвіта. Цифрова освіта місцевих громад."></a>
+			 <nav>
+				  <ul class="menu">
+						<li><a href="/user-authed/account.html" class="hovered">Мої курси</a></li>
+						<li><a href="/user-authed/courses.html">Освітні матеріали</a></li>
+						<li><a href="/user-authed/about.html">Про проєкт</a></li>
+						<li><a href="/user-authed/links.html">Корисні джерела</a></li>
+				  </ul>
+			 </nav>
+			 <a href="/user-authed/account.html" class="enter"><img src="../images/person.svg" alt="Вхід в аккаунт"></a>
+		</div>
+  </header>
+
+  <main>
+	<section class="search">
+		<div class="container">
+			<div class="search-text">
+				<h1>Ваші курси</h1>
+				<p>Тут ви можете зберігати свої курси та переглядати прогрес по них </p>
+				<a href="../index.html">Вийти з аккаунта</a>
+			</div>
+		</div>
+	</section>
+	<section class="your-courses">
+		<div class="container">
+			<div class="your-courses_container">
+				<div class="course-item">
+					<h2>Всі незавершені курси</h2>
+					<div class="course-wrap">
+						<a href="" class="course-child"></a>
+						<a href="" class="course-child">
+							<img src="../images/course2.jpg" alt="">
+							<div class="course-description">
+								<h3>Криптографія</h3>
+								<p>Курс дозволяє вивчити методи шифрування та захисту інформації. Учасники отримають теоретичні знання та практичні навички використання криптографічних алгоритмів у цифровому середовищі, зокрема в аспектах електронного захисту даних та криптовалютних технологій. Курс спрямований на розвиток високотехнічних навичок для забезпечення безпеки інформації.</p>
+								<progress id="progress1" value="60" max="100" class="styled"></progress>
+								<p class="tags">Теги: <span>Cryptography</span>, <span>Python</span></p>
+							</div>
+						</a>
+						<a href="" class="course-child">
+							<img src="../images/course3.jpg" alt="">
+							<div class="course-description">
+								<h3>Рекрутинг</h3>
+								<p>Курс пропонує учасникам засвоїти ключові принципи та стратегії ефективного найму нових працівників. Учасники отримають поглиблені знання щодо розробки вакансій, проведення ефективних співбесід, аналізу кандидатів та використання сучасних інструментів у сфері рекрутингу.</p>
+								<progress id="progress1" value="10" max="100" class="styled"></progress>
+								<p class="tags">Теги: <span>Web Development</span>, <span>JavaScript</span></p>
+							</div>
+						</a>
+
+					</div>
+				</div>
+				<div class="course-item">
+					<h2 class="completed-courses">Всі завершені курси</h2>
+					<div class="course-wrap">
+						<a href="/user-authed/course-congratulations.html" class="course-child">
+							<img src="../images/course1.png" alt="">
+							<div class="course-description">
+								<h3>Розробка сайтів</h3>
+								<p>це захоплюючий поглиблений курс, спрямований на вивчення ключових аспектів створення та розвитку веб-сайтів. Учасники отримають відмінну можливість освоїти мови програмування, такі як HTML, CSS та JavaScript, а також вивчити сучасні фреймворки та інструменти для оптимізації веб-додатків.</p>
+								<progress id="progress1" value="100" max="100" class="styled"></progress>
+								<style>h2.completed-courses + .course-wrap #progress1::after{
+									content: '100% Вітаємо';
+								}</style>
+								<p class="tags">Теги: <span>Web Development</span>, <span>JavaScript</span></p>
+							</div>
+						</a>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  </main>
+	
+	<footer>
+		<p>&copy; <script>document.write(new Date().getFullYear());</script> ГромОсвіта. Усі права захищені.</p>
+		<p class="freepik">Изображение от upklyak на Freepik</p>
+  </footer>
+</body>
+</html>

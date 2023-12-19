@@ -1,0 +1,184 @@
+//! <section class="hero">
+.hero {
+	height: calc(100dvh - 80px);
+	& .container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		cursor: default;
+	}
+}
+.hero-text {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 10dvh 0;
+	text-align: center;
+	& h1 {font-size: $text-112;}
+	& h2 {
+		font-size: $text-96;
+		background: #326CF9;
+		background: -webkit-linear-gradient(to right, #326CF9 0%,  #326CF9 25%, $textColor 50%,  #326CF9 75%, #326CF9 100%);
+		background: -moz-linear-gradient(to right, #326CF9 0%,  #326CF9 25%, $textColor 50%,  #326CF9 75%, #326CF9 100%);
+		background: linear-gradient(to right, #326CF9 0%,  #326CF9 25%, $textColor 50%,  #326CF9 75%, #326CF9 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+.hero-buttons {
+	max-width: 50%;
+	margin: 0 auto;
+	& h3{
+		font-size: $text-40;
+		margin: 0 0 2.5rem 0;
+		text-align: center;
+	}
+	& p{
+		font-size: $text-24;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+		color: $secondaryColor;
+		& span{
+			color: $textColor;
+			font-size: $text-26;
+			font-weight: bold;
+		}
+	}
+	
+}
+.buttons-container {
+	display: flex;
+	gap: 25px;
+	margin: 0 0 1.25rem 0;
+	justify-content: center;
+	& .btn{
+		flex: 1 1 auto;
+	}
+}
+.btn {
+	text-align: center;
+	font-size: $text-20;
+	border-radius: 10px;
+	padding: 25px;
+	display: block;
+	transition: all .3s ease;
+}
+.blue-btn {
+	background-color: $mainColor;
+	color: #fff;
+	border: 1px solid $mainColor;
+	&:hover{
+		background: transparent;
+	}
+}
+.black-btn {
+	border: 1px solid $secondaryColor;
+	color: $secondaryColor;
+	&:hover{
+		border: 1px solid $textColor;
+		color: $textColor;
+	}
+}
+//! <section class="benefits">
+.benefits {
+	text-align: center;
+	padding: 1rem 0 8rem 0;
+	& .container h2{
+		font-size: $text-64;
+		margin: 0 0 4rem 0;
+	}
+}
+
+.benefits-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.benefits-child {
+	flex: 0 1 30%;
+	max-width: 35%;
+	& h4{
+		font-size: $text-32;
+		font-weight: bold;
+		margin: 0 0 1rem 0;
+	}
+	& p{
+		font-size: $text-22;
+		color: $secondaryColor;
+	}
+}
+
+
+//! <section class="courses">
+// .hero-image {}
+.courses {
+	& .container{
+		padding: 2rem 0 8rem;
+		& h2{
+			font-size: $text-64;
+			margin: 0 0 3rem 0;
+			text-align: center;
+		}
+		& > a{
+			position: relative;
+			left: 90%;
+			display: inline-block;
+			font-size: $text-20;
+			color: $secondaryColor;
+			margin: 0 0 1rem 0;
+			padding: 1rem 2rem 1rem 1rem;
+			transition: color .3s ease;
+			position: relative;
+			&:hover{
+				color: $textColor;
+				& span{
+					right: -3%;
+					transform: scale(1.2);
+				}
+			}
+			& span{
+				position: absolute;
+				transition: all .3s ease, color .01s ease;
+				right: 0;
+			}
+		}
+	}
+}
+.courses-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 2rem 1rem;
+}
+.course-block {
+	overflow: hidden;
+	flex: 0 1 24%;
+	& a:hover img{
+		transform: scale(1.1);
+	}
+	& img {
+		object-fit: cover;
+		transition: all .3s ease;
+		margin: 0 0 1rem 0;
+		height: 200px;
+		width: 100%;
+	}
+	& h3 {
+		font-size: $text-22;
+		margin: 0 0 .5rem 0;
+	}
+	& p {
+		& span{
+			color: $secondaryColor;
+
+		}
+	}
+}
+
+
+
+
+

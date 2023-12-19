@@ -1,0 +1,117 @@
+@media screen and (max-width: 1140px) {
+	.hero-text {
+		& h1 {font-size: $text-96;}
+		& h2 {font-size: $text-80;}
+}
+}
+
+@media screen and (max-width: 1024px) {
+	.hero .container{
+		padding: 7dvh 0;
+	}
+	.hero-buttons {
+		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+   .hero-text{
+		margin: 0 0 7dvh 0;
+		& h1 {font-size: $text-80;}
+		& h2 {font-size: $text-64;}
+	}
+	.hero-buttons h3{
+		font-size: $text-32;
+	}
+	.hero-buttons {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	header .container{
+		flex-direction: column;
+		height: fit-content;
+		align-items: center;
+
+	}
+	.menu{
+		justify-content: center;
+		gap: 10px 20px;
+		& li a{
+			font-size: $text-24;
+		}
+	}
+	.enter {
+		margin-left: 0;
+  }
+  .hero{
+	height: calc(100dvh + -250px);
+  }
+	.hero .container{
+		justify-content: space-evenly;
+		padding: 0;
+	}
+	.hero-text{
+		margin: 0 0 0 0;
+		& h1 {font-size: $text-64;}
+		& h2 {font-size: $text-48;}
+	}
+	.hero-buttons h3{
+		font-size: $text-26;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.enter{
+		display: none;
+	}
+	.hero-text{
+		margin: 0 0 0 0;
+		& h1 {font-size: $text-48;}
+		& h2 {
+			font-size: $text-36;
+			margin: 0 0 2rem 0;
+		}
+	}
+	.hero-buttons h3{
+		font-size: $text-26;
+	}
+	.buttons-container{
+		gap: 10px;
+	}
+	.benefits{
+		padding: 1rem 0 4rem 0;
+	}
+	.benefits .container h2{
+		font-size: $text-48;
+		margin: 0 0 2rem 0;
+	}
+	.benefits-child{
+		flex: 1 1 100%;
+		max-width: none;
+		margin: 1rem 0 0 0;
+	}
+	.courses .container{
+		padding: 2rem 0 3rem;
+	}
+	.courses .container h2{
+		font-size: $text-48;
+		margin: 0 0 1rem;
+	}
+	.courses .container > a{
+		left: 0;
+		padding: 1rem 2rem 1rem 0 ;
+	}
+	.course-block{
+		flex: 1 1 100%;
+	}
+	
+	
+}
+
+@media screen and (max-width: 320px) {
+ main{
+	padding: 2dvh 0;
+ }
+}

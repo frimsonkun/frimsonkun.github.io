@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./sass/main.css">
+	<title>Автентифікація</title>
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+<body class="auth">
+  <canvas id="spider"></canvas>
+	<script src="./script/electric-background.js" defer></script>
+	<div id="content_container">
+		<div id="form_container">
+			 <div id="form_header_container">
+				  <h2 id="form_header">Увійдіть у ваш аккаунт</h2>
+			 </div>
+
+			 <div id="form_content_container">
+				  <div id="form_content_inner_container">
+						<input type="email" id="email" placeholder="Пошта">
+						<input type="password" id="password" placeholder="Пароль">
+				  </div>
+				  <div id="button_container">
+						<a href="/user-authed/user-authed.html" id="login" class="btn blue-btn">Увійти</a>
+						<a href="/signup.html" id="signup" class="btn black-btn">Зареєструватись</a>
+			  </div>
+			 </div>
+		</div>
+  </div>
+</body>
+<script src="./script/electric-background.js" defer></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js" type="module"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="auth.js" type="module">
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+	import { getAuth } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+	// Your web app's Firebase configuration
+	const firebaseConfig = {
+	 apiKey: "AIzaSyB-3JzY65KoD46dWvaZJbUrh5JUzuOQ9Mo",
+	 authDomain: "local-courses.firebaseapp.com",
+	 databaseURL: "https://local-courses-default-rtdb.europe-west1.firebasedatabase.app",
+	 projectId: "local-courses",
+	 storageBucket: "local-courses.appspot.com",
+	 messagingSenderId: "531115645629",
+	 appId: "1:531115645629:web:c4e12a2de2b9f6c3e7f5d4",
+	 measurementId: "G-89VJZ86XQG"
+	};
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	// Initialize variables
+	const auth = firebase.auth()
+	const database = firebase.database()
+	
+// Set up our register function
+document.getElementById('login').addEventListener('click', login, true);
+document.getElementById('signup').addEventListener('click', register, true);
+
+function register() {
+// Get all our input fields
+email = document.getElementById('email').value
+password = document.getElementById('password').value
+full_name = document.getElementById('full_name').value
+
+// Validate input fields
+if (validate_email(email) == false || validate_password(password) == false) {
+  alert('Невірний email або пароль')
+  return 
+  // Don't continue running the code
+}
+if (validate_field(full_name) == false) {
+  alert('Поле не може бути пустим')
+  return
+}
+
+// Move on with Auth
+auth.createUserWithEmailAndPassword(email, password)
+.then(function() {
+  // Declare user variable
+  var user = auth.currentUser
+
+  // Add this user to Firebase Database
+  var database_ref = database.ref()
+
+  // Create User data
+  var user_data = {
+	 email : email,
+	 full_name : full_name,
+	 last_login : Date.now()
+  }
+
+  // Push to Firebase Database
+  database_ref.child('users/' + user.uid).set(user_data)
+  console.log('data pushed')
+  // DOne
+  alert('Користувача успішно зареєстровано😊')
+  console.log('should be alert')
+})
+.catch(function(error) {
+  // Firebase will use this to alert of its errors
+  var error_code = error.code
+  var error_message = error.message
+
+  alert(error_message)
+})
+}
+
+// Set up our login function
+function login() {
+console.log('clicked login')
+// Get all our input fields
+email = document.getElementById('email').value
+password = document.getElementById('password').value
+
+// Validate input fields
+if (validate_email(email) == false || validate_password(password) == false) {
+  alert('Невірний email або пароль')
+  return
+  // Don't continue running the code
+}
+
+auth.signInWithEmailAndPassword(email, password)
+.then(function() {
+  // Declare user variable
+  var user = auth.currentUser
+
+  // Add this user to Firebase Database
+  var database_ref = database.ref()
+
+  // Create User data
+  var user_data = {
+	 last_login : Date.now()
+  }
+
+  // Push to Firebase Database
+  database_ref.child('users/' + user.uid).update(user_data)
+
+  // Done
+//!   window.location.replace('index.html')
+  alert('Успішно залогінено')
+
+})
+.catch(function(error) {
+  // Firebase will use this to alert of its errors
+  var error_code = error.code
+  var error_message = error.message
+
+  alert(error_message)
+})
+}
+
+
+//? Validate Functions
+
+function validate_email(email) {
+expression = /^[^@]+@\w+(\.\w+)+\w$/
+if (expression.test(email) == true) {
+  // Email is good
+  return true
+} else {
+  // Email is not good
+  return false
+}
+}
+
+function validate_password(password) {
+// Firebase only accepts lengths greater than 6
+if (password < 6) {
+  return false
+} else {
+  return true
+}
+}
+
+function validate_field(field) {
+if (field == null) {
+  return false
+}
+
+if (field.length <= 0) {
+  return false
+} else {
+  return true
+}
+}
+</script>
+
+
+</html>
