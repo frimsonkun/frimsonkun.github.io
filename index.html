@@ -1,141 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEvtlcExBUEQhr8XAQ5cyQARIAIyQAacHHF0IgNEQAaIABHgyoUIqE/1bk3Nm7c7+6qek67aqqnZnv66e2b+GTFjG804PjWATWAXWIvPnJ7iuwbuu5LsAhjwHBDQZQIOAzjmNwlg8DtgHvgCLoDbJIj/d4ADYA74BLZKkBIgDW4LDGKAkpnAFbA9CVICWPIGYPC9ykNgdUJcayWt5QD7bWtsy0pH5jnXSl6jXQLajc8BluuJOQVOgH3gLKIdAZcxLs3rf5xXngM8fqvAemzYO7AYQT+ApRiX5t27x1jn+l/LAd/Z/BCAS/P1vYAhLZoKUHmIWrfBFfwDejf5T1o0tnFBLc1PtcnNooVEOpSRl8Jd6gU0N9lrr1yopL4JmvrivdCUjOad8C1QzhupeEjfkPwmq/E3hcYrfup+aqU5/3eKnQ5CzEZNeoux2SvJzmnP4WcV+i4DZt48TG0iNW9ymrW915TmKhsKqAqaOv0AX+hhGWXZ8+EAAAAASUVORK5CYII="
-        type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Vocabulary</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ГромОсвіта - цифрова освіта для кожного</title>
+	<link rel="stylesheet" href="./sass/main.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 </head>
-
 <body>
-    <aside class="block">
-        <h1 class="title">Should Know!</h1>
-        <div class="dashed">
-            <div class="propertyes">
-                <ul>
-                    <li><b>Header</b>Голова, шапка</li>
-                    <li><b>Footer</b>Подвал(foot - нога)</li>
-                    <li><b>Frame</b>Рамка, кадр</li>
-                    <li><b>Template</b>Шаблон</li>
-                    <li><b>Description</b>Описание</li>
-                    <li><b>Landing</b>Одностраничный сайт</li>
-                    <li><b>Title</b>Заголовок</li>
-                    <li><b>Stylesheet</b>Таблица стилей</li>
-                    <li><b>Mediaqueries</b>Медиазапросы</li>
-                    <li><b>Opacity</b>Непрозрачность</li>
-                    <li><b>Alpha</b>Тоже, что и Opacity</li>
-                    <li><b>List</b>Список</li>
-                    <li><b>Item</b>Отдельная единица, обычно дочерний элемент</li>
-                    <li><b>Article</b>Статья</li>
-                    <li><b>Value</b>Значение</li>
-                    <li><b>Middle</b>Центр, середина</li>
-                    <li><b>Property</b>Свойство</li>
-                    <li><b>Key</b>Ключ</li>
-                    <li><b>Align</b>Выравнивание(по вторичной оси)</li>
-                    <li><b>Justify</b>Выравнивание(по главной оси)</li>
-                    <li><b>Flexible</b>Гибкий</li>
-                    <li><b>Direction</b>Направление</li>
-                    <li><b>Wrapper</b>Обертка</li>
-                    <li><b>Order</b>Порядок</li>
-                    <li><b>Visibility</b>Видимость</li>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo-link"><img src="./images/logo.svg" class="logo-image" alt="ГромОсвіта. Цифрова освіта місцевих громад."></a>
+        <nav>
+            <ul class="menu">
+                <li><a href="/courses.html">Освітні матеріали</a></li>
+                <li><a href="/about.html">Про проєкт</a></li>
+                <li><a href="/links.html">Корисні джерела</a></li>
+            </ul>
+        </nav>
+        <a href="/authentification.html" class="enter"><img src="./images/enter.svg" alt="Вхід в аккаунт"></a>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="container">
+		    <div class="hero-text">
+		    	<h1>ГромОсвіта</h1>
+		    	<h2>Цифрова освіта для кожного</h2>
+            </div>
 
-                    <li><b>Float</b>Поплавок, заставляет элемент "плавать"</li>
-                    <li><b>Height</b>Высота</li>
-                    <li><b>Width</b>Ширина</li>
-                    <li><b>Overflow</b>Переполнение, избыток</li>
-                    <li><b>Border</b>Граница</li>
-                    <li><b>Image</b>Изображение</li>
-                    <li><b>Outline</b>Контур</li>
-                    <li><b>Space</b>Пространство</li>
-                    <li><b>Font</b>Шрифт</li>
-                    <li><b>Shadow</b>Tень</li>
-                    <li><b>Transition</b>Переход</li>
-                    <li><b>Background</b>Фон</li>
-                    <li><b>Size</b>Размер</li>
-                    <li><b>Box</b>Коробка, контейнер</li>
-                    <li><b>Span</b>Охватывать, перекрывать, "отрешённый" элемент</li>
-                    <li><b>Link</b>Ссылка</li>
-                    <span class="propertyes"><li><b>Margin</b>внешний отступ, край, грань, опушка, </li>
-							<li><b>Padding</b>Внутреннний отступ, набивка</li></span>
-                    <span class="propertyes small">
-                    		<li><b>Column</b>Колонка</li>
-                    		<li><b>Row</b>Ряд</li>
-                		</span>
-                    <span class="propertyes small">
-                		<li><b>Before</b>До</li>
-                		<li><b>After</b>После</li>
-							</span>
-                    <span class="propertyes small">
-								<li><b>Top</b>Верх</li>
-								<li><b>Right</b>Право</li>
-								<li><b>Bottom</b>Низ</li>
-								<li><b>Left</b>Лево</li>
-							 </span>
+            <div class="hero-buttons">
+                <h3>Будуйте майбутнє своєї громади через доступну та цифрову освіту</h3>
+                <div class="buttons-container">
+                    <a href="/courses.html" class="btn blue-btn">Почати</a>
+                    <a href="tel:0953077079" class="btn black-btn">Допомога</a>
+                </div>
+                <p><img src="./images/dot.png" alt="Зелена точка"><span>1000+</span>громадян вже з нами</p>
+            </div>
+		    <!-- <img src="./images/hero.svg" class="hero-image" alt="Image by pch.vector on Freepik"> -->
+        </div>
+    </section>
+    <section class="benefits">
+    <div class="container">
+        <h2>Чому так важлива цифрова освіта?</h2>
+        <div class="benefits-box">
+            <div class="benefits-child">
+                <h4>&#128519 Актуально</h4>
+                <p>Саме в цифровому просторі вирує життя</p>
+            </div>
+            <div class="benefits-child">
+                <h4>&#128579 Корисно</h4>
+                <p>Отримані навички дадуть вам нові можливості</p>
+            </div>
+            <div class="benefits-child">
+                <h4>&#129299 Прогресивно</h4>
+                <p>Будьте на хвилі часу</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="courses">
+        <div class="container">
+        <h2>Наші курси</h2>
+        <a href="/courses.html">Всі курси<span>⇢</span></a>
+        <div class="courses-box">
+            <div class="course-block">
+                <a href="#">
+                    <img src="../images/course1.png" alt="">
+                    <h3>Розробка сайтів</h3>
+                    <p>Теги: <span>Web Development</span>, <span>HTML</span>, <span>JavaScript</span></p>
+                </a>
+            </div>
 
-                </ul>
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/course2.jpg" alt="">
+                    <h3>Big Data</h3>
+                    <p>Теги: <span>Data Science</span>, <span>Python</span></p>
+                </a>
+            </div>
+
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/course3.jpg" alt="">
+                    <h3>Рекрутинг</h3>
+                    <p>Теги: <span>Комунікація</span>, <span>Soft skills</span></p>
+                </a>
+            </div>
+
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/desinger1.jpg" alt="">
+                    <h3>Дизайн</h3>
+                    <p>Теги: <span>UX/UI Design</span>, <span>Adobe XD</span></p>
+                </a>
+            </div>
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/ecology.jpg" alt="">
+                    <h3>Основи захисту навколишнього середовища</h3>
+                    <p>Теги: <span>Екологія</span>, <span>Свідомість</span></p>
+                </a>
+            </div>
+
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/psychology.jpeg" alt="">
+                    <h3>Основи Психології</h3>
+                    <p>Теги: <span>Психологія</span>, <span>Самовдосконалення</span></p>
+                </a>
+            </div>
+
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/time-managment.jpeg" alt="">
+                    <h3>Тайм-менеджмент</h3>
+                    <p>Теги: <span>Організація</span>, <span>Ефективність</span></p>
+                </a>
+            </div>
+
+            <div class="course-block">
+                <a href="#">
+                    <img src="./images/finances.jpg" alt="">
+                    <h3>Основи фінансів</h3>
+                    <p>Теги: <span>Фінанси</span>, <span>Бюджетування</span></p>
+                </a>
             </div>
         </div>
-    </aside>
-    <aside class="block">
-        <h2 class="title">Nice To Know!</h2>
-        <div class="dashed">
-            <div class="propertyes">
-                <ul>
-                    <li><b>Layout</b>Вёрстка</li>
-                    <li><b>Sidebar</b>Боковая панель</li>
-                    <li><b>Feedback</b>Обратная связь</li>
-                    <li><b>Feature</b>Фича, характерная черта</li>
-                    <li><b>Keyframes</b>Ключевые кадры анимации</li>
-                    <li><b>Linear</b>Линейный</li>
-                    <li><b>Junior</b>Джуниор, молодой</li>
-                    <li><b>Delay</b>Задержка</li>
-                    <li><b>Duration</b>Продолжительность</li>
-                    <li><b>Offset</b>Смещение</li>
-                    <li><b>Letter-spacing</b>Расстояние между буквами</li>
-                    <li><b>Line</b>Линия</li>
-                    <li><b>Quote</b>Цитата</li>
-                    <li><b>Origin</b>Источник, похождение</li>
-                    <li><b>Repeat</b>Повторение</li>
-                    <li><b>Cover</b>Покрывать</li>
-                    <li><b>Stretch</b>Растяжение</li>
-                    <li><b>Weight</b>Масса, вес</li>
-                    <li><b>Gap</b>Зазор, щель</li>
-                    <span class="propertyes small">
-						 <li><b>Hard</b>Твёрдый, жесткий</li>
-						 <li><b>Soft</b>Мягкий</li>
-				  </span>
-                </ul>
-            </div>
-        </div>
-    </aside>
-    <aside class="block">
-        <h2 class="title">Obviously</h2>
-        <div class="dashed">
-            <div class="propertyes">
-                <ul>
-                    <li><b>Content</b>Содержание</li>
-                    <li><b>Gradient</b>Градиент</li>
-                    <li><b>Interface</b>Интерфейс</li>
-                    <li><b>Navigation</b>Навигация</li>
-                    <li><b>Database</b>База данных</li>
-                    <li><b>Position</b>Позиция</li>
-                    <li><b>Display</b>Отображение</li>
-                    <li><b>Color</b>Цвет</li>
-                    <li><b>Family</b>Семья, семейство</li>
-                    <li><b>Cursor</b>Курсор</li>
-                    <span class="propertyes small">
-							<li><b>Vertical</b>Вертикаль</li>
-                    	<li><b>Horizontal</b>Горизонталь</li>
-						</span>
-                </ul>
-            </div>
-        </div>
-    </aside>
+    </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> ГромОсвіта. Усі права захищені.</p>
+    <p class="freepik">Изображение от upklyak на Freepik</p>
+</footer>
+
+
 </body>
-
 </html>
